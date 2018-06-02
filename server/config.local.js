@@ -20,18 +20,18 @@ module.exports = {
 */
   port: GLOBAL_CONFIG.port,
   legacyExplorer: GLOBAL_CONFIG.legacyExplorer,
-  
+
   admin: {
-  	email: process.env.ADMIN_EMAIL,
-  	password: process.env.ADMIN_PASSWORD
+  	email: 'admin@iesdosmares.com',
+  	password: '1234'
   },
 
   db: {
     connector: 'mysql',
     hostname: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 3306,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    user: 'root',
+    password: 'alumno',
     database: 'instituto',
   },
 
@@ -48,8 +48,8 @@ module.exports = {
           rejectUnauthorized: false
         },
         auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASSWORD
+          user: 'alumnosdaw2@iesdosmares.com',
+          pass: 'alumnos2DAW'
         }
       }
     ]

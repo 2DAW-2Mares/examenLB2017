@@ -3,7 +3,7 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-var dsConfig = require('../datasources.' + process.env.NODE_ENV + '.js');
+var dsConfig = require('../datasources.local.js');
 
 module.exports = function(app) {
   var User = app.models.Usuario;
