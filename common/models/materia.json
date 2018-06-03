@@ -46,6 +46,13 @@
       "principalId": "creadorGrupo",
       "permission": "ALLOW",
       "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "misMaterias"
     }
   ],
   "methods": {}

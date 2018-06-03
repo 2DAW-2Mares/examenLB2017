@@ -14,7 +14,7 @@ module.exports = function(app) {
       // (using count() because we only want to know if such a record exists)
       var Materiaimpartida = app.models.Materiaimpartida;
       Materiaimpartida.count({
-        userId: userId
+        docente: userId
       }, function(err, count) {
         // A: The datastore produced an error! Pass error to callback
         if (err) return cb(err);
