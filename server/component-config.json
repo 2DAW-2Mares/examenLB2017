@@ -1,5 +1,11 @@
 {
   "loopback-component-explorer": {
     "mountPath": "/explorer"
+  },
+  "loopback-fixtures": {
+    "fixturePath": "/fixtures/data/",
+    "append": false,
+    "autoLoad": false,
+    "locale": "es"
   }
 }

@@ -1,0 +1,73 @@
+Usuario:
+  usuarioAdmin:
+    apellidos: "del centro"
+    nombre: "administrador"
+    username: "admin"
+    password: "alumno"
+    email: "admin@iesdosmares.com"
+  profesores_{1..10}:
+    apellidos: "{{name.lastName}}"
+    nombre: "{{name.firstName}}"
+    password: "alumno"
+    email: "profesor{@}@iesdosmares.com"
+    username: "profesor{@}"
+  alumno{1..20}:
+    apellidos: "{{name.lastName}}"
+    nombre: "{{name.firstName}}"
+    password: "alumno"
+    email: "alumno{@}@iesdosmares.com"
+    username: "alumno{@}"
+
+Centro:
+  centro1:
+    codigo: "30005338"
+    nombre: "I.E.S. Dos Mares"
+    web: "http://iesdosmares.com"
+    verificado: 1
+    coordinador: @usuarioAdmin
+
+Anyoescolar:
+  anyoEscolar1:
+    fechainicio: "2017 09 02"
+    fechafinal: "2018 07 01"
+    centro: @centro1
+
+Materia:
+  materia_{1..10}:
+    nombre: "{{commerce.department}}"
+
+Nivel:
+  nivel:
+    nombre: "E.S.O."
+
+Grupo:
+  grupo_{1..10}:
+    curso: "(function() { return Math.floor(Math.random()*4) + 1;})()"
+    letra: "(function() { return String.fromCharCode(Math.floor(Math.random()*5) + 85);})()"
+    nombre: "nombre"
+    verificado: 1
+    nivel: @nivel
+    tutor: @profesores_{@}
+    creador: @usuarioAdmin
+    anyoescolar: @anyoEscolar1
+
+Materiaimpartida:
+  materiaImpartida_{1..20}:
+    grupo: "(function() { return '@grupo_' + (Math.floor(Math.random()*10)+1);})()"
+    materia: "(function() { return '@materia_' + (Math.floor(Math.random()*10)+1);})()"
+    docente: "(function() { return '@profesores_' + (Math.floor(Math.random()*10)+1);})()"
+
+Materiamatriculada:
+  materiaMatriculada_{1..200}:
+    grupo: "(function() { return '@grupo_' + (Math.floor(Math.random()*10)+1);})()"
+    materia: "(function() { return '@materia_' + (Math.floor(Math.random()*10)+1);})()"
+    alumno: "(function() { return '@alumno' + (Math.floor(Math.random()*20)+1);})()"
+
+Role:
+  rol1:
+    name: "admin"
+
+RoleMapping:
+  rolemap1:
+    principalType: "USER"
+    principalId: @usuarioAdmin

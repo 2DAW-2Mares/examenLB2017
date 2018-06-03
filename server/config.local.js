@@ -23,16 +23,7 @@ module.exports = {
 
   admin: {
   	email: 'admin@iesdosmares.com',
-  	password: '1234'
-  },
-
-  db: {
-    connector: 'mysql',
-    hostname: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 3306,
-    user: 'root',
-    password: 'alumno',
-    database: 'instituto',
+  	password: 'alumno'
   },
 
   emailDs: {

@@ -8,6 +8,13 @@ module.exports = function(app) {
       app.dataSources.db.automigrate(institutosTables, function(er) {
         if (er) throw er;
         console.log('Loopback tables [', institutosTables, '] created in ', app.dataSources.db.adapter.name);
+        app.loadFixtures()
+          .then(function() {
+            console.log('Done!');
+          })
+          .catch(function(err) {
+            console.log('Errors:', err);
+          });
       });
     });
   }
