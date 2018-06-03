@@ -40,8 +40,9 @@
     },
     "materiasmatriculadas": {
       "type": "hasMany",
-      "model": "Materiamatriculada",
-      "foreignKey": "alumno"
+      "model": "Materia",
+      "foreignKey": "alumno",
+      "through": "Materiamatriculada"
     },
     "tutorizados": {
       "type": "hasMany",

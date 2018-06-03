@@ -18,7 +18,7 @@
       "model": "Grupo",
       "foreignKey": "grupo"
     },
-    "materiaId": {
+    "materia": {
       "type": "belongsTo",
       "model": "Materia",
       "foreignKey": "materia"
