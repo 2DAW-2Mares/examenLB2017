@@ -71,3 +71,5 @@ RoleMapping:
   rolemap1:
     principalType: "USER"
     principalId: @usuarioAdmin
+    roleId: @rol1
+    
